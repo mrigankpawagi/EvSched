@@ -31,10 +31,10 @@
   );
 }
 .linkcards div:nth-child(3) a {
-  background-image: linear-gradient(
-    102.1deg,
-    rgba(96, 221, 142, 1) 8.7%,
-    rgba(24, 138, 141, 1) 88.1%
+  background-image: radial-gradient(
+    circle 602px at 2.1% 5.1%,
+    rgba(233, 0, 120, 1) 0%,
+    rgba(0, 0, 0, 1) 90.1%
   );
 }
 .linkcards div:nth-child(4) a {
@@ -45,10 +45,10 @@
   );
 }
 .linkcards div:nth-child(5) a {
-  background-image: radial-gradient(
-    circle 602px at 2.1% 5.1%,
-    rgba(233, 0, 120, 1) 0%,
-    rgba(0, 0, 0, 1) 90.1%
+  background-image: linear-gradient(
+    102.1deg,
+    rgba(96, 221, 142, 1) 8.7%,
+    rgba(24, 138, 141, 1) 88.1%
   );
 }
 .linkcards a span:nth-child(1) {
@@ -59,11 +59,4 @@
   bottom: 10px;
   right: 10px;
   font-size: 20px;
-}
-.kronologue-icon-big {
-  background-image: url(../images/kronologue.png);
-  height: 40px;
-  width: 40px;
-  display: inline-block;
-  background-size: cover;
 }
