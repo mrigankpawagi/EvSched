@@ -34,6 +34,7 @@
 	<link rel="stylesheet" href="css/materialize.min.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/pages.css">
+	<link rel="stylesheet" href="css/project.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link
 		href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500&display=swap"
@@ -91,8 +92,118 @@
 	</div>
 	<nav class="nav-extended"></nav>
 	<ul id="slide-out" class="sidenav"></ul>
-	<div>
-	
+	<div id="miniHero" style="background-image: linear-gradient(
+			109.6deg,
+			rgba(62, 161, 219, 1) 11.2%,
+			rgba(93, 52, 236, 1) 100.2%
+		  );">
+		<h1>The Project</h1>
+	</div>
+	<div class="container">
+		<h1 class="center">A Novel Approach to Linear Scheduling using a Genetic Algorithm</h1>
+		<hr>
+		<h2>Background</h2>
+		<p>Job-scheduling has a wide variety of uses in many industries - the most obvious of which is optimizing
+			resources to extract maximum output in minimum time. Such an application has been developed and implemented
+			using several algorithms and has proven to be extremely effective in managing multiple parallel tasks - or
+			jobs.
+		</p>
+		<p>
+			However, this model cannot be directly adopted for scheduling day-to-day personal activities, particularly
+			because of the fact that people - almost always - work linearly, i.e., perform one activity at a time. In
+			fact, study has shown that single-tasking is much more productive than multitasking<sup data-cite=0></sup>,
+			and can allow people to finish much more work despite taking up tasks in a sequential manner. This not only
+			enhances the quality of work, but also minimizes productivity-related distress<sup data-cite=1></sup> for
+			students and professionals, among other people.</p>
+		<h2>
+			Overview
+		</h2>
+		<p>A large fraction of people<sup data-cite=2></sup> finds it difficult to create a perfect schedule that works
+			every single day. All the critical parameters that come into play – urgency, value, physical and mental
+			commitment – are too complicated for the human mind to compute accurately, making it difficult for people to
+			recognize their exact productivity patterns.</p>
+		<p>To provide a mathematically sound solution to this everyday problem, I propose a new approach to linear
+			scheduling that is developed specifically to cater to this need. This approach - called <b>EvSched</b> - is
+			based on optimization through a genetic algorithm that has been elaborated on in this text.</p>
+		<p>I have also developed a prototype called <a href="https://kronologue-ai.web.app">Kronologue</a> to
+			demonstrate this technique. Kronologue boils down the process of effective scheduling to a few easy steps
+			for the user, whose entire schedule is rearranged and optimized keeping in view their energy and efficiency
+			curves, their priorities, their capacities, and their sensitivity to distractions. </p>
+		<p>Kronologue has been able to produce schedules with as much as 99% greater productivity<sup
+				data-cite=3></sup>.</p>
+		<h2>
+			Onboarding
+		</h2>
+		<p>First-time users are asked to provide a set of baseline data in order to begin using the scheduler based on
+			EvSched. This data includes details about the user’s intended sleep pattern (including daytime naps) and
+			details about their planned tasks for the day. Each task has a set of properties that have been detailed
+			below.</p>
+		<ol>
+			<li><b>Time</b>
+				<p>The user is asked if their tasks have a strict timing, in which case they can simply enter
+					this exact time interval. If the task has flexible timings, the user is asked for a preferred time
+					interval during the day, along with a <i>Time Priority</i> - which measures the extent of
+					rescheduling allowed for the task. The Time Priority of a task with strict timings is set as 100%.
+				</p>
+			</li>
+			<li><b>Task Metrics</b>
+				<p>
+					The user is asked to provide the following four parameters for each task. These parameters are set
+					on a scale<sup data-cite=4></sup> from 0 to 100%. They are are variable and their values can change
+					over time based on the
+					responses received from the user.
+				<ul>
+					<li><i>Mental Activity</i> - Mental effort required for the task.</li>
+					<li><i>Physical Activity</i> - Physical effort required for the task.</li>
+					<li><i>Urgency</i> - Degree of immediacy associated with the task.</li>
+					<li><i>Value</i> - Importance of the task with respect to the user’s short- or long-term goals.</li>
+				</ul>
+				</p>
+			</li>
+			<li><b>Optimization Parameters</b>
+				<p>These parameters essentially play the role of weights in the core algorithm and are supposed to be
+					determined over time by the program. However, the user is also given the option to enter initial
+					values<sup data-cite=5></sup> into these parameters when the task is created for the first time.</p>
+				<ul>
+					<li>Influence of the previous day's performance on the productivity of each task.
+					</li>
+					<li>Cumulative <i>Tiring Effect</i> caused by each task over time.</li>
+					<li><i>Tiring Effect</i> caused each task per unit time (per minute).
+					<li>Effect of tiredness on productivity in each task.</li>
+					<li>Effect of mental and physical hindrances on productivity in each task.</li>
+				</ul>
+			</li>
+		</ol>
+		<h3>
+			Sleep
+		</h3>
+		<p>Sleep is also treated like a task in this algorithm. However, it is processed separately and the typical
+			metrics and parameters denote slightly different information in case of sleep. The user is required to enter
+			the duration of their night sleep, and the maximum napping time they need over the day along with the
+			minimum nap duration. The meanings of all the metrics and parameters in context of sleep have been described
+			below.</p>
+		<ol>
+			<li><b>Task Metrics</b>
+				<p>In case of sleep,
+				<ul>
+					<li>Mental Activity is replaced by <i>Mental Influence</i> which measures how comfortable the sleep
+						is.</li>
+					<li>Physical Activity is replaced by <i>Physical Influence</i> which measures how rejuvenating the
+						sleep is.</li>
+					<li>There is no Urgency property.</li>
+
+				</ul>
+				</p>
+			</li>
+			<li><b>Optimization Parameters</b>
+				<p>In case of sleep, the Tiring Effect is treated as the <i>Regenerating Effect</i> by giving it
+					negative values for related parameters.</p>
+			</li>
+		</ol>
+		<h2>Rationale for Choice of Metrics and Parameters</h2>
+		<hr>
+		<h2>Footnotes and Citations</h2>
+		<ol id="citations"></ol>
 	</div>
 
 	<footer class="page-footer"></footer>
@@ -100,6 +211,7 @@
 	<script src="js/jquery.min.js"></script>
 	<script src="js/materialize.min.js"></script>
 	<script src="js/script.js"></script>
+	<script src="js/project.js"></script>
 </body>
 
 </html>

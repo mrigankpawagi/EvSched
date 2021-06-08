@@ -1,0 +1,26 @@
+.container * {
+  font-family: charter, Georgia, Cambria, "Times New Roman", Times, serif;
+  font-size: 15px;
+}
+.container h1 {
+  font-family: fell, Georgia, Cambria, "Times New Roman", Times, serif;
+  font-size: 2rem;
+}
+.container h2,
+.container h3 {
+  font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.container h2 {
+  font-size: 1.5rem;
+}
+.container h3 {
+  font-size: 1.2rem;
+}
+.container hr {
+  border: 1px solid #666;
+  outline: 0px;
+  width: 50%;
+}
+.container ul > li {
+  list-style-type: disc!important;
+}
