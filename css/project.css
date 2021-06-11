@@ -17,8 +17,8 @@
   font-size: 1.2rem;
 }
 .container hr {
-  border: 1px solid #666;
-  outline: 0px;
+  border: 1px solid #666;  
+  background: #666;
   width: 50%;
 }
 .container ul > li {
@@ -32,4 +32,14 @@
 .container blockquote {
   border-color: #192854;
   background: rgb(84 187 255 / 25%);
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+.container .math {
+  width: fit-content;
+  margin: 5px auto 5px auto;
+  font-family: system-ui;
+}
+.container .math * , mjx-container *{
+  font-family: "MJXTEX-S1"!important;
 }
