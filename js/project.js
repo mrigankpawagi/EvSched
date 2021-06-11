@@ -1,6 +1,6 @@
 const citations = ["Jory MacKay in RescueTime:blog - <a href='https://blog.rescuetime.com/single-tasking/'>Single-tasking: How to focus on one thing at a time, get more done, and feel less stressed</a>.",
-    "[distress related study]",
-    "[sources for people being disorganized + My survey]",
+    "Ilies, Remus & Huth, Megan & Ryan, Ann & Dimotakis, Nikolaos. (2015). Explaining the Links Between Workload, Distress, and Work-Family Conflict Among School Employees: Physical, Cognitive, and Emotional Fatigue. Journal of Educational Psychology. 107. 1136-1149. 10.1037/edu0000029.",
+    "As suggested by my survey which has been discussed later.",
     "According to the evaluation model described later.",
     "Where 0 corresponds to very low and 100% corresponds to very high.",
     "On the same scale as Task Metrics.",
@@ -10,7 +10,8 @@ const citations = ["Jory MacKay in RescueTime:blog - <a href='https://blog.rescu
     "\\(1 \\text{ day} =\\) \\( 24 \\text{ hours} =\\) \\( 24 \\times 60 \\text{ minutes} =\\) \\( 1440 \\text{ minutes}\\).",
     "Unless stated otherwise, the data in each function is related to the task occurring at each particular minute.",
     "Based on the discussion in <i>Rationale for choice of Metrics and Parameters</i>.",
-    "It should be noted that plots for real users are almost never continuous, unlike the plot in this example."
+    "It should be noted that plots for real users are almost never continuous, unlike the plot in this example.",
+    "<a href='https://kronologue-ai.web.app/'>Kronologue</a> is also under active development."
 ];
 
 const cites = $("sup[data-cite]");

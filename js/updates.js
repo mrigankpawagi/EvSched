@@ -3,6 +3,13 @@ const timeline = [
         year: '2021',
         items: [
             {
+                datetime: '2021-06-12',
+                day: '12',
+                month: 'June',
+                title: 'Website goes live!',
+                content: 'Finished working on the website and finally published it on the web.'  
+            },
+            {
                 datetime: '2021-06-05',
                 day: '5',
                 month: 'June',
@@ -11,7 +18,7 @@ const timeline = [
             }
         ]
     }
-];
+].reverse();
 
 for(var i = 0; i < timeline.length; i++){
     let appcont = "";
